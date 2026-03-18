@@ -70,8 +70,8 @@ async function runTest() {
       // In Simon's real app, window.app is set during window.onload
       windowAny.app = {
         loadFromUrl: async (url: string) => {
-          // Simulate async book loading (2 seconds)
-          await new Promise(resolve => setTimeout(resolve, 2000));
+          // Simulate async book loading (5 seconds)
+          await new Promise(resolve => setTimeout(resolve, 5000));
           console.log('loadFromUrl called with:', url);
         },
         goToStart: async () => {
@@ -98,9 +98,9 @@ async function runTest() {
 
     // Check result is correct
     if (result === 'Evaluation successful') {
-      console.log('✅ TEST PASSED - evaluate returned correct value\n');
+      console.log('TEST PASSED - evaluate returned correct value\n');
     } else {
-      console.log('❌ TEST FAILED - got wrong value: ' + result + '\n');
+      console.log(' TEST FAILED - got wrong value: ' + result + '\n');
     }
 
     console.log('=== Android done - now run: npm run test:ios ===');

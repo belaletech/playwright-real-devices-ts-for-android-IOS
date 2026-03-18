@@ -95,12 +95,9 @@ async function runTest() {
 
     // Check result — Android gives "Evaluation successful", iOS gives "[object Object]"
     if (result === 'Evaluation successful') {
-      console.log('✅ TEST PASSED - evaluate returned correct value\n');
+      console.log(' TEST PASSED - evaluate returned correct value\n');
     } else {
-      console.log('❌ TEST FAILED - got wrong value: ' + result);
-      console.log('   Android returns "Evaluation successful"');
-      console.log('   iOS returns "' + result + '"');
-      console.log('   Same code, different result = LambdaTest iOS bug\n');
+      console.log(' TEST FAILED - got wrong value: ' + result);
     }
 
     console.log('=== iOS done ===');
