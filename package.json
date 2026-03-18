@@ -1,0 +1,20 @@
+{
+  "name": "lambdatest-playwright-ts",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript project for LambdaTest iOS and Android real device testing",
+  "scripts": {
+    "test:ios": "ts-node tests/ios.test.ts",
+    "test:android": "ts-node tests/android.test.ts",
+    "test:ios:debug": "DEBUG=pw:api ts-node tests/ios.test.ts",
+    "test:android:debug": "DEBUG=pw:api ts-node tests/android.test.ts"
+  },
+  "dependencies": {
+    "playwright": "1.53.2",
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0"
+  }
+}
